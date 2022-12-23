@@ -1,0 +1,28 @@
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: bisque;
+	padding: 1rem;
+}
+
+.cont_top {
+	display: flex;
+	justify-content: space-between;
+}
+.box {
+	width: 300px;
+}
+.cont_img {
+	margin: 0 auto;
+	width: 150px;
+}
+img {
+	width: 100%;
+}
+.link {
+	text-decoration: none;
+	color: rgb(99, 195, 216);
+}
+.text_end {
+	text-align: end;
+}

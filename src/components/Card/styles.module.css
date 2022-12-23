@@ -1,0 +1,69 @@
+.absolute_pos0 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.box_absolute {
+	position: absolute;
+	bottom: 5px;
+	color: #fff;
+	font-size: 11px;
+	background-color: #0000005e;
+	padding: 2px 4px;
+	border-radius: 6px;
+}
+
+.card {
+	width: 265px;
+	height: 385px;
+	position: relative;
+	border-radius: 5px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.cont_img {
+	z-index: 10;
+}
+
+.img {
+	width: 100%;
+	height: 100%;
+}
+
+.box_year {
+	left: 5px;
+}
+
+.box_rate {
+	right: 5px;
+}
+
+.details {
+	background-color: #000;
+
+	padding-top: 0.75rem; /* AL CONTENEDOR LE AFECTA EL PADDING EN X, CUANDO USO POSITION*/
+	text-align: start;
+}
+
+.card:hover .details {
+	z-index: 30;
+}
+
+.details .title {
+	color: #fff;
+	padding: 0rem 0.5rem; /* AL HIJO DEL CONTENEDOR LE AFECTA EL PADDING EN Y, CUANDO USO POSITION*/
+	font-weight: bold;
+}
+
+.details .synopsis {
+	color: #fff;
+	opacity: 0.7;
+	font-size: 0.85rem;
+	line-height: 1.25rem;
+	margin: 0;
+
+	padding: 0rem 0.5rem;
+}
