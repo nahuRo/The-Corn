@@ -1,8 +1,7 @@
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
-	background-color: bisque;
-	padding: 1rem;
+	padding: 1rem 0;
 }
 
 .cont_top {
@@ -14,7 +13,7 @@
 }
 .cont_img {
 	margin: 0 auto;
-	width: 150px;
+	width: 120px;
 }
 img {
 	width: 100%;
@@ -25,4 +24,12 @@ img {
 }
 .text_end {
 	text-align: end;
+}
+
+.cont_nav {
+	margin-top: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 3rem;
 }

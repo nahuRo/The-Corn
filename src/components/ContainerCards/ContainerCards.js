@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getMovies } from "../../services/fetchAPI";
 import Card from "../Card/Card";
 import styles from "./styles.module.css";
+import SideBar from "../SideBar/SideBar";
 
 const ContainerCards = () => {
 	const [movies, setMovies] = useState([]);
@@ -22,9 +23,14 @@ const ContainerCards = () => {
 
 	return (
 		<div className={styles.container}>
-			{movies.map((movie) => (
-				<Card movie={movie} />
-			))}
+			<div className={styles.cont_cards}>
+				{movies.map((movie) => (
+					<Card movie={movie} />
+				))}
+			</div>
+			<div className={styles.cont_sidebar}>
+				<SideBar />
+			</div>
 		</div>
 	);
 };

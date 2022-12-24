@@ -1,0 +1,10 @@
+.container {
+	margin: 1.5rem 0;
+}
+
+.text {
+	text-align: center;
+	color: rgba(75, 85, 99, 1);
+	font-size: 0.9rem;
+	/* line-height: 1.25rem; */
+}

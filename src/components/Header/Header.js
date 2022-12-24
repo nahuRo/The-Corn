@@ -1,6 +1,8 @@
 import React from "react";
-import NavBar from "../Navbar/Navbar";
 import styles from "./styles.module.css";
+
+import NavBar from "../Navbar/Navbar";
+import Search from "../Search/Search";
 
 import popCorn from "../../assets/popCorn.png";
 
@@ -23,9 +25,10 @@ const Header = () => {
 					</a>
 				</div>
 			</div>
-			<NavBar />
-
-			<div className={styles.categories_cont}></div>
+			<div className={styles.cont_nav}>
+				<NavBar />
+				<Search />
+			</div>
 		</div>
 	);
 };
