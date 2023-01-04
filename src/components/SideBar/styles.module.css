@@ -1,6 +1,7 @@
 .color {
 	font-weight: bold;
 }
+
 .text_area {
 	line-height: 1.75;
 }
@@ -14,27 +15,13 @@
 .area_content {
 	margin: 1rem 0;
 }
-/* TERCER SECTION  */
-.grilla {
+
+.cont_Movies {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-gap: 5px;
-}
-.grilla a {
-	text-decoration: none;
-	background-color: #40394d;
-	color: #fff;
-	font-size: 12px;
-	text-align: center;
-	padding: 3px 5px;
-	border-radius: 5px;
-	transition: all ease-in-out 0.1s;
-}
-.grilla a:hover {
-	transform: scale(1.05);
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 0.5rem;
 }
 
-/* 4TA SECTION */
 .section ul li {
 	padding-left: 1.75em;
 	position: relative;
@@ -52,6 +39,13 @@
 	top: 0.6875em;
 	width: 0.375em;
 }
+
 .section ul li a {
-	color: tomato;
+	color: #f26e66;
+}
+
+@media only screen and (max-width: 768px) {
+	.section {
+		margin-top: 1rem;
+	}
 }

@@ -5,6 +5,27 @@
 }
 
 .App {
-	max-width: 1150px;
 	margin: 0 auto;
+	padding: 1rem;
+}
+
+@media only screen and (min-width: 500px) {
+	.App {
+		max-width: 500px;
+		/* padding: 1rem 0rem; */
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.App {
+		max-width: 768px;
+		/* padding: 1rem 0rem; */
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.App {
+		max-width: 1024px;
+		/* padding: 1rem 0rem; */
+	}
 }

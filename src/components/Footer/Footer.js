@@ -6,7 +6,7 @@ const Footer = () => {
 		<div className={styles.container}>
 			<hr />
 			<p className={styles.text}>
-				Cinecalidad, ver o descargar películas full hd gratis en 1 LINK
+				TheCorn, ver o descargar películas full hd gratis en 1 LINK
 			</p>
 			<p className={styles.text}>
 				Descargar películas. Ver películas online. Cine en casa gratis. Películas

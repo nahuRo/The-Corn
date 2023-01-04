@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
+import { Link } from "react-router-dom";
 
 import NavBar from "../Navbar/Navbar";
 import Search from "../Search/Search";
@@ -16,7 +17,9 @@ const Header = () => {
 					<p>1 link, 1 click.</p>
 				</div>
 				<div className={styles.cont_img}>
-					<img src={popCorn} alt="logo" />
+					<Link to={`/`}>
+						<img src={popCorn} alt="logo" />
+					</Link>
 				</div>
 				<div className={`${styles.box} ${styles.text_end}`}>
 					{/* PARA PONER 2 PROPIEDADES MODULE CONCATENO LOS 2 STRING, EN ESTE CASO USE TEMPLATE STRINGS ``*/}
@@ -25,9 +28,13 @@ const Header = () => {
 					</a>
 				</div>
 			</div>
-			<div className={styles.cont_nav}>
-				<NavBar />
-				<Search />
+			<div className={styles.cont_navigation}>
+				<div className={styles.cont_navBar}>
+					<NavBar />
+				</div>
+				<div className={styles.cont_search}>
+					<Search />
+				</div>
 			</div>
 		</div>
 	);

@@ -1,37 +1,30 @@
 import { useState, useEffect } from "react";
 import { getMovies } from "../../services/fetchAPI";
-import Card from "../Card/Card";
-import styles from "./styles.module.css";
-import SideBar from "../SideBar/SideBar";
+import { useParams } from "react-router-dom";
 
-const ContainerCards = () => {
+import Card from "../Card/Card";
+
+const ContainerCards = ({ movieDetails }) => {
+	const { nameCategory, movieName, numberPage } = useParams();
 	const [movies, setMovies] = useState([]);
 
 	useEffect(() => {
-		getMovies().then((resp) => {
+		getMovies(movieName, numberPage, nameCategory).then((resp) => {
 			const { data } = resp;
-			console.log(data);
 			setMovies(data.movies);
 		});
-	}, []);
+	}, [nameCategory, movieName, numberPage]);
 
-	if (movies.length === 0) {
-		return <div>Loading...</div>;
+	if (!movies) {
+		return <div>NOT MOVIE</div>;
 	}
 
-	console.log(movies);
-
 	return (
-		<div className={styles.container}>
-			<div className={styles.cont_cards}>
-				{movies.map((movie) => (
-					<Card movie={movie} />
-				))}
-			</div>
-			<div className={styles.cont_sidebar}>
-				<SideBar />
-			</div>
-		</div>
+		<>
+			{movies.map((movie) => (
+				<Card movie={movie} key={movie.id} movieDetails={movieDetails} />
+			))}
+		</>
 	);
 };
 
