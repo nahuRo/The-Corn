@@ -1,21 +1,10 @@
-import { useState, useEffect } from "react";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 import styles from "./styles.module.css";
 
-import { getMovies } from "../../services/fetchAPI";
-
 const PageButtons = () => {
-	// const { nameCategory, movieName, numberPage } = useParams();
 	const [pages, setPages] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-
-	// useEffect(() => {
-	// 	getMovies(movieName, numberPage, nameCategory).then((resp) => {
-	// 		const { data } = resp;
-	// 		console.log(data.movie_count / 12);
-	// 		// setPages(data.movie_count / 12);
-	// 	});
-	// }, [nameCategory, movieName, numberPage]);
 
 	const handlePaginationPrev = (list) => {
 		if (!list.includes(1)) {

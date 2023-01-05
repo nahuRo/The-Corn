@@ -42,7 +42,7 @@
 	}
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1030px) {
 	/* el min-width tiene que ser el mismo que el width del container */
 	.contData {
 		display: grid;

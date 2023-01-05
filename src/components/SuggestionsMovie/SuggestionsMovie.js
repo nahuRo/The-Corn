@@ -12,7 +12,6 @@ const SuggestionsMovie = ({ id }) => {
 		if (id) {
 			movieSuggest(id).then((resp) => {
 				const { data } = resp;
-				// console.log("data", data);
 				setSuggestion(data.movies);
 			});
 		}
@@ -20,7 +19,7 @@ const SuggestionsMovie = ({ id }) => {
 
 	return (
 		<>
-			<h5>Sugerencias</h5>
+			<h5>You may be interested in these other movies</h5>
 			<div className={styles.container}>
 				{suggestion.map((info) => (
 					<MiniCard key={info.id} movie={info} />

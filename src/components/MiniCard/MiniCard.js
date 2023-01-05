@@ -9,7 +9,7 @@ const MiniCard = ({ movie }) => {
 	return (
 		<div className={styles.container}>
 			<Link to={`/movie/${movie.imdb_code}`}></Link>
-			<img src={movie.medium_cover_image} alt="" />
+			<img src={movie.medium_cover_image} alt={movie.title} />
 			<div className={styles.cont_title}>
 				<span className={styles.title}>{movie.title}</span>
 			</div>

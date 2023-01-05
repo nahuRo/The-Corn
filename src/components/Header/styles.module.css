@@ -1,9 +1,3 @@
-/* .container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 1rem 0;
-} */
-
 .cont_top {
 	display: flex;
 	justify-content: space-between;
@@ -69,7 +63,7 @@ img {
 	}
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1030px) {
 	.cont_navigation {
 		display: grid;
 		grid-template-columns: repeat(4, minmax(0, 1fr));

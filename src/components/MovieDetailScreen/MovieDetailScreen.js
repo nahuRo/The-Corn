@@ -3,8 +3,6 @@ import { useParams } from "react-router-dom";
 import { getMovie, OMDBInfo } from "../../services/fetchAPI";
 import styles from "./styles.module.css";
 
-// import { UilFolderInfo } from "@iconscout/react-unicons";
-
 import SuggestionsMovie from "../SuggestionsMovie/SuggestionsMovie";
 
 const MovieDetailScreen = () => {
@@ -23,37 +21,44 @@ const MovieDetailScreen = () => {
 		});
 	}, [id]);
 
-	// console.log(detail);
-	// console.log(moreDetail);
-
 	return (
 		<div className={styles.container}>
-			<h1 className={styles.title}>
-				{detail.title_english}
-				<span> ({detail.year})</span>
-			</h1>
+			<h1 className={styles.title}>{detail.title_long}</h1>
 			<div className={styles.sectionImg}>
 				<div className={styles.cont_img}>
 					<img src={detail.large_cover_image} alt={detail.title} />
 				</div>
 				<div className={styles.resume_info}>
-					<p>{detail.description_full}</p>
+					<p>
+						{detail.description_full === ""
+							? moreDetail.Plot
+							: detail.description_full}
+					</p>
 					<ul>
 						<li>
-							<span>Titulo Originial </span>
+							<span className={styles.subTitle}>Title </span>
 							{detail.title}
 						</li>
 						<li>
-							<span>Director </span>
-							{moreDetail.Director}
+							<span className={styles.subTitle}>Rating </span>
+							{detail.rating}
 						</li>
 						<li>
-							<span>Generos </span>
-							{detail.genres && detail.genres.map((genres) => genres)}
+							<span className={styles.subTitle}>Released </span>
+							{moreDetail.Released || detail.date_uploaded}
 						</li>
 						<li>
-							<span>Actores </span>
-							{moreDetail.Actors}
+							<span className={styles.subTitle}>Director </span>
+							{moreDetail.Director || "N/A"}
+						</li>
+						<li>
+							<span className={styles.subTitle}>Genders </span>
+							{moreDetail.Genre ||
+								(detail.genres && detail.genres.map((genre) => genre))}
+						</li>
+						<li>
+							<span className={styles.subTitle}>Cast </span>
+							{moreDetail.Actors || "N/A"}
 						</li>
 					</ul>
 				</div>

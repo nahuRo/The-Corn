@@ -12,20 +12,17 @@
 @media only screen and (min-width: 500px) {
 	.App {
 		max-width: 500px;
-		/* padding: 1rem 0rem; */
 	}
 }
 
 @media only screen and (min-width: 768px) {
 	.App {
 		max-width: 768px;
-		/* padding: 1rem 0rem; */
 	}
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1030px) {
 	.App {
-		max-width: 1024px;
-		/* padding: 1rem 0rem; */
+		max-width: 1030px;
 	}
 }

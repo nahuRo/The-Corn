@@ -25,3 +25,10 @@ export const movieSuggest = async (id) => {
 	);
 	return data;
 };
+
+export const bestIMSDRating = async (rating) => {
+	const { data } = await axios.get(
+		`https://yts.mx/api/v2/list_movies.json?sort_by=year&limit=12&order_by=desc&minimum_rating=${rating}`
+	);
+	return data;
+};

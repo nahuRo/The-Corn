@@ -1,6 +1,6 @@
 .container {
 	position: relative;
-	max-width: 230px;
+	/* max-width: 200px; */
 }
 .container:hover img {
 	transition: all ease-in-out 400ms;

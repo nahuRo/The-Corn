@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./styles.module.css";
-import { Link } from "react-router-dom";
 import ContainerCards from "../ContainerCards/ContainerCards";
 
 const SideBar = () => {
@@ -19,7 +18,7 @@ const SideBar = () => {
 			<div className={styles.section}>
 				<h4 className={styles.title_area}>Peliculas Destacadas</h4>
 				<div className={`${styles.area_content} ${styles.cont_Movies}`}>
-					<ContainerCards movieDetails={false} />
+					<ContainerCards movieDetails={false} rating={true} />
 				</div>
 			</div>
 			<div className={styles.section}>

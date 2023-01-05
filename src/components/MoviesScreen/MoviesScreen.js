@@ -10,7 +10,7 @@ const MoviesScreen = () => {
 		<>
 			<div className={styles.contData}>
 				<div className={styles.cont_cards}>
-					<ContainerCards movieDetails={true} />
+					<ContainerCards movieDetails={true} rating={false} />
 				</div>
 				<div className={styles.cont_sidebar}>
 					<SideBar />

@@ -1,19 +1,27 @@
 import { useState, useEffect } from "react";
-import { getMovies } from "../../services/fetchAPI";
+import { getMovies, bestIMSDRating } from "../../services/fetchAPI";
 import { useParams } from "react-router-dom";
 
 import Card from "../Card/Card";
 
-const ContainerCards = ({ movieDetails }) => {
+const ContainerCards = ({ movieDetails, rating }) => {
 	const { nameCategory, movieName, numberPage } = useParams();
 	const [movies, setMovies] = useState([]);
 
 	useEffect(() => {
-		getMovies(movieName, numberPage, nameCategory).then((resp) => {
-			const { data } = resp;
-			setMovies(data.movies);
-		});
-	}, [nameCategory, movieName, numberPage]);
+		if (rating) {
+			console.log(rating);
+			bestIMSDRating(9).then((resp) => {
+				const { data } = resp;
+				setMovies(data.movies);
+			});
+		} else {
+			getMovies(movieName, numberPage, nameCategory).then((resp) => {
+				const { data } = resp;
+				setMovies(data.movies);
+			});
+		}
+	}, [nameCategory, movieName, numberPage, rating]);
 
 	if (!movies) {
 		return <div>NOT MOVIE</div>;
