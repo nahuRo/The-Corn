@@ -1,7 +1,11 @@
 .container {
 	position: relative;
-	/* max-width: 200px; */
 }
+
+.container img {
+	width: 100%;
+}
+
 .container:hover img {
 	transition: all ease-in-out 400ms;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

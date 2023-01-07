@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { getMovies, bestIMSDRating } from "../../services/fetchAPI";
 import { useParams } from "react-router-dom";
 
+import styles from "./styles.module.css";
+
 import Card from "../Card/Card";
 
 const ContainerCards = ({ movieDetails, rating }) => {
@@ -10,7 +12,6 @@ const ContainerCards = ({ movieDetails, rating }) => {
 
 	useEffect(() => {
 		if (rating) {
-			console.log(rating);
 			bestIMSDRating(9).then((resp) => {
 				const { data } = resp;
 				setMovies(data.movies);
@@ -24,7 +25,20 @@ const ContainerCards = ({ movieDetails, rating }) => {
 	}, [nameCategory, movieName, numberPage, rating]);
 
 	if (!movies) {
-		return <div>NOT MOVIE</div>;
+		return (
+			<div className={styles.not_found}>
+				<h1>Ups! movie not found</h1>
+			</div>
+		);
+	}
+
+	if (movies.length === 0) {
+		return (
+			<div className={styles.cont_load}>
+				<span className={styles.loader}></span>
+				<h3>Loading ...</h3>
+			</div>
+		);
 	}
 
 	return (

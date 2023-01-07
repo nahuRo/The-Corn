@@ -1,4 +1,5 @@
 import axios from "axios";
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 export const getMovies = async (movieName = "", page = 1, genre = "Comedy") => {
 	const { data } = await axios.get(
@@ -15,7 +16,9 @@ export const getMovie = async (id) => {
 };
 
 export const OMDBInfo = async (IMBD_code) => {
-	const { data } = await axios.get(`http://www.omdbapi.com/?apikey=adb234ba&i=${IMBD_code}`);
+	const { data } = await axios.get(
+		`http://www.omdbapi.com/?apikey=${API_KEY}&i=${IMBD_code}`
+	);
 	return data;
 };
 

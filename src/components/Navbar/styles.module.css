@@ -1,11 +1,11 @@
 .links {
-	grid-column: 1 / 4;
-	overflow: hidden;
 	height: 100%;
 
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	column-gap: 0.65rem;
+	justify-content: space-evenly;
+	gap: 0.65rem;
 }
 
 .links li {
@@ -18,7 +18,7 @@
 	color: #fff;
 	display: block;
 	font-size: 0.875rem;
-	line-height: 1.25rem;
+	line-height: 1.25;
 	padding: 0.25rem 0.5rem;
 	background-color: #545454;
 	transition: all ease-in-out 0.3s;
@@ -26,4 +26,37 @@
 .links a:hover {
 	background-color: #000;
 	color: #fff;
+}
+
+@media only screen and (min-width: 500px) {
+	.links {
+		height: 100%;
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 0.65rem;
+	}
+
+	.links li {
+		list-style-type: none;
+	}
+
+	.links a {
+		text-decoration: none;
+		border-radius: 0.35rem;
+		color: #fff;
+		display: block;
+		font-size: 0.875rem;
+		line-height: 1.25;
+		padding: 0.25rem 0.5rem;
+		background-color: #545454;
+		transition: all ease-in-out 0.3s;
+	}
+	.links a:hover {
+		background-color: #000;
+		color: #fff;
+	}
 }

@@ -1,7 +1,11 @@
 import React from "react";
 
 const NotFoundScreen = () => {
-	return <div>404</div>;
+	return (
+		<div>
+			<h1>404</h1>
+		</div>
+	);
 };
 
 export default NotFoundScreen;

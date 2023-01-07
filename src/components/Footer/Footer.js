@@ -4,15 +4,19 @@ import styles from "./styles.module.css";
 const Footer = () => {
 	return (
 		<div className={styles.container}>
-			<hr />
+			<span className={styles.marketLine}></span>
+
 			<div className={styles.cont_text}>
-				<p>TheCorn, ver o descargar películas full hd gratis en 1 LINK</p>
+				<p>TheCorn, your site to see movie information</p>
 				<p>
-					Descargar películas. Ver películas online. Cine en casa gratis. Películas
-					online y para descargar en 1 link. Excelente calidad brrip (720p/1080p)
+					with ♥️ <span> by </span>
+					<a target="blank" href="https://nahuro.github.io/Portfolio/">
+						Aguss 💻
+					</a>
 				</p>
 			</div>
-			<hr />
+
+			<span className={styles.marketLine}></span>
 		</div>
 	);
 };

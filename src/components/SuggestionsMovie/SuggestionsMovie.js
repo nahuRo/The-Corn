@@ -19,7 +19,8 @@ const SuggestionsMovie = ({ id }) => {
 
 	return (
 		<>
-			<h5>You may be interested in these other movies</h5>
+			<h3>You may be interested in these other movies</h3>
+			<span className={styles.marketLine}></span>
 			<div className={styles.container}>
 				{suggestion.map((info) => (
 					<MiniCard key={info.id} movie={info} />

@@ -5,6 +5,7 @@
 .cont_cards {
 	display: grid;
 	justify-items: center;
+	align-items: center;
 	gap: 1rem;
 }
 
@@ -43,7 +44,6 @@
 }
 
 @media only screen and (min-width: 1030px) {
-	/* el min-width tiene que ser el mismo que el width del container */
 	.contData {
 		display: grid;
 		grid-template-columns: repeat(4, minmax(0, 1fr));

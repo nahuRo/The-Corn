@@ -25,9 +25,11 @@ const MovieDetailScreen = () => {
 		<div className={styles.container}>
 			<h1 className={styles.title}>{detail.title_long}</h1>
 			<div className={styles.sectionImg}>
-				<div className={styles.cont_img}>
-					<img src={detail.large_cover_image} alt={detail.title} />
-				</div>
+				<img
+					className={styles.img_detail}
+					src={detail.large_cover_image}
+					alt={detail.title}
+				/>
 				<div className={styles.resume_info}>
 					<p>
 						{detail.description_full === ""
@@ -64,6 +66,8 @@ const MovieDetailScreen = () => {
 				</div>
 			</div>
 			<div className={styles.sectionMedia}>
+				<h3>Trailer</h3>
+				<span className={styles.marketLine}></span>
 				<iframe
 					className={styles.iframe}
 					src={`https://www.youtube.com/embed/${detail.yt_trailer_code}`}

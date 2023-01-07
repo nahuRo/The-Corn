@@ -5,6 +5,7 @@
 .text_area {
 	line-height: 1.75;
 }
+
 .title_area {
 	background-color: #545454;
 	color: #fff;
@@ -20,28 +21,6 @@
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 0.5rem;
-}
-
-.section ul li {
-	padding-left: 1.75em;
-	position: relative;
-	list-style-type: none;
-	margin: 0.5rem 0;
-}
-
-.section ul li:before {
-	background-color: #d1d5db;
-	border-radius: 50%;
-	content: "";
-	height: 0.375em;
-	left: 0.25em;
-	position: absolute;
-	top: 0.6875em;
-	width: 0.375em;
-}
-
-.section ul li a {
-	color: #f26e66;
 }
 
 @media only screen and (max-width: 768px) {
