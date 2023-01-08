@@ -5,7 +5,7 @@ const Navbar = () => {
 	return (
 		<ul className={styles.links}>
 			<li>
-				<Link to={`/category/comedy`}>Comendy</Link>
+				<Link to={`/category/comedy`}>Comedy</Link>
 			</li>
 			<li>
 				<Link to={`/category/Horror`}>Horror</Link>
